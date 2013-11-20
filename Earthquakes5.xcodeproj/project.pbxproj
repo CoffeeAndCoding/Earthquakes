@@ -22,6 +22,7 @@
 		9BCFEABB1839627C007BFC68 /* EQEListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEABA1839627C007BFC68 /* EQEListViewController.m */; };
 		9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEABD183965F6007BFC68 /* EQEEntry.m */; };
 		9BCFEAC11839661B007BFC68 /* EQEApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */; };
+		9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49037183D37B800161F0A /* EQEWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		9BCFEABD183965F6007BFC68 /* EQEEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEEntry.m; sourceTree = "<group>"; };
 		9BCFEABF1839661B007BFC68 /* EQEApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEApiRequest.h; sourceTree = "<group>"; };
 		9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEApiRequest.m; sourceTree = "<group>"; };
+		9BE49036183D37B800161F0A /* EQEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEWebViewController.h; sourceTree = "<group>"; };
+		9BE49037183D37B800161F0A /* EQEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				9BCFEA9A1839622B007BFC68 /* EQEAppDelegate.m */,
 				9BCFEAB91839627C007BFC68 /* EQEListViewController.h */,
 				9BCFEABA1839627C007BFC68 /* EQEListViewController.m */,
+				9BE49036183D37B800161F0A /* EQEWebViewController.h */,
+				9BE49037183D37B800161F0A /* EQEWebViewController.m */,
 				9BCFEABC183965F6007BFC68 /* EQEEntry.h */,
 				9BCFEABD183965F6007BFC68 /* EQEEntry.m */,
 				9BCFEABF1839661B007BFC68 /* EQEApiRequest.h */,
@@ -258,6 +263,7 @@
 				9BCFEABB1839627C007BFC68 /* EQEListViewController.m in Sources */,
 				9BCFEAC11839661B007BFC68 /* EQEApiRequest.m in Sources */,
 				9BCFEA9B1839622B007BFC68 /* EQEAppDelegate.m in Sources */,
+				9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */,
 				9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */,
 				9BCFEA971839622B007BFC68 /* main.m in Sources */,
 			);
@@ -460,6 +466,7 @@
 				9BCFEAB51839622B007BFC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BCFEAB61839622B007BFC68 /* Build configuration list for PBXNativeTarget "Earthquakes5Tests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +475,7 @@
 				9BCFEAB81839622B007BFC68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

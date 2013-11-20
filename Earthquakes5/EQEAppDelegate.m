@@ -8,6 +8,7 @@
 
 #import "EQEAppDelegate.h"
 #import "EQEListViewController.h"
+#import "EQEWebViewController.h"
 
 @implementation EQEAppDelegate
 
@@ -17,6 +18,10 @@
     EQEListViewController *lvc = [[EQEListViewController alloc] initWithStyle:UITableViewStylePlain];
     
     UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:lvc];
+    
+    EQEWebViewController *wvc = [[EQEWebViewController alloc] init];
+    lvc.webViewController = wvc;
+    
     
     [[self window] setRootViewController:masterNav];
     self.window.backgroundColor = [UIColor whiteColor];

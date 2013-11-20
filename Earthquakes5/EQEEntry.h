@@ -12,6 +12,7 @@
 @interface EQEEntry : NSObject
 
 @property (nonatomic) NSString *title;
+@property (nonatomic) NSString *link;
 
 - (id)initWithJson:(NSDictionary *)json;
 

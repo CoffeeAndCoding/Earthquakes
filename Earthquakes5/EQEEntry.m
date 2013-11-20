@@ -18,6 +18,7 @@
     self = [super init];
     if (self) {
         self.title = [json valueForKey:@"title"];
+        self.link = [json valueForKey:@"link"];
     }
     
     return self;

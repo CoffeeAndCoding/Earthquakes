@@ -10,12 +10,15 @@
 #import "EQEApiRequest.h"
 #import "EQEEntry.h"
 
+@class EQEWebViewController;
+
 @interface EQEListViewController : UITableViewController <ApiRequestDelegate>
 
 {
     
    
 }
+@property (nonatomic) EQEWebViewController *webViewController;
 
 
 @end

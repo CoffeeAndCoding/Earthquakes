@@ -9,6 +9,8 @@
 #import "EQEListViewController.h"
 #import "EQEApiRequest.h"
 #import "EQEEntry.h"
+#import "EQEWebViewController.h"
+
 
 @interface EQEListViewController ()
 
@@ -18,14 +20,22 @@
 
 @implementation EQEListViewController
 
+@synthesize webViewController;
+
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     
-    EQEApiRequest *request = [[EQEApiRequest alloc] init];
-    request.delegate = self;
+    self.title = @"Earthquakes";
     
-    [request start];
-}
+    
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    
+    [self doRefresh:nil];
+    }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -54,13 +64,47 @@
     return self.eqeEntries.count;
 }
 
-#pragma mark - APIRequestDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //Push the web view controlleronto the navigation stack
+    [self.navigationController pushViewController:webViewController animated:YES];
+    
+    //Grab the entry
+    EQEEntry *entry = [self.eqeEntries objectAtIndex:indexPath.row];
+    
+    //Construct URL with the link string
+    NSURL *url = [NSURL URLWithString:entry.link];
+    
+    //Construct URL Request
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+
+    //Load the request into the webview
+    [webViewController.webView loadRequest:req];
+    
+    //Set the title of the web view controllers nav item
+    webViewController.navigationItem.title = entry.title;
+}
+
+#pragma mark - APIRequestDelegat
 
 - (void)apiRequest:(EQEApiRequest *)request didFinishWithResults:(NSArray *)results
 {
     self.eqeEntries = results;
     NSLog(@"%@", [[results objectAtIndex:0] title]);
     [self.tableView reloadData];
+}
+
+#pragma mark - actions
+
+- (void)doRefresh:(id)sender
+{
+    EQEApiRequest *request = [[EQEApiRequest alloc] init];
+    request.delegate = self;
+    
+    [request start];
+    
+    [self.refreshControl endRefreshing];
+
 }
 
 @end
