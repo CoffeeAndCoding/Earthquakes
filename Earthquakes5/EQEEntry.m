@@ -19,6 +19,11 @@
     if (self) {
         self.title = [json valueForKey:@"title"];
         self.link = [json valueForKey:@"link"];
+        self.latitude = [[json valueForKey:@"latitude"] doubleValue];
+        self.longitude = [[json valueForKey:@"longitude"] doubleValue];
+        
+        
+        
     }
     
     return self;

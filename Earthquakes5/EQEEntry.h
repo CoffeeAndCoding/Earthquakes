@@ -13,6 +13,9 @@
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *link;
+@property double latitude;
+@property double longitude;
+
 
 - (id)initWithJson:(NSDictionary *)json;
 

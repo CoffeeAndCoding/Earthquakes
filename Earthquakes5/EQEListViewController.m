@@ -34,6 +34,8 @@
     [refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
+    
+    
     [self doRefresh:nil];
     }
 
