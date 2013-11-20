@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Earthquakes";
+    self.title = @"Recent Earthquakes";
     
     
     
@@ -57,10 +57,11 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UITableViewCell"];
     }
     EQEEntry *e = [self.eqeEntries objectAtIndex:[indexPath row]];
     cell.textLabel.text = e.title;
+    cell.detailTextLabel.text = e.earthquakeRating;
     
     return cell;
     

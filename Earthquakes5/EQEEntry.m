@@ -17,10 +17,12 @@
 {
     self = [super init];
     if (self) {
-        self.title = [json valueForKey:@"title"];
+        self.earthquakeRating = [[[json valueForKey:@"title"] componentsSeparatedByString:@" "] objectAtIndex:0];
+        self.title = [[[json valueForKey:@"title"] componentsSeparatedByString:@" - "]objectAtIndex:1];
         self.link = [json valueForKey:@"link"];
         self.latitude = [[json valueForKey:@"latitude"] doubleValue];
         self.longitude = [[json valueForKey:@"longitude"] doubleValue];
+        self.magnitude = [[json valueForKey:@"magnitude"] floatValue];
         
         
         

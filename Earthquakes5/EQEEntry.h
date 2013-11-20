@@ -11,10 +11,12 @@
 
 @interface EQEEntry : NSObject
 
+@property (nonatomic) NSString *earthquakeRating;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *link;
 @property double latitude;
 @property double longitude;
+@property float magnitude;
 
 
 - (id)initWithJson:(NSDictionary *)json;
