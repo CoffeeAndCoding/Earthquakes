@@ -10,6 +10,8 @@
 #import "EQEApiRequest.h"
 #import "EQEEntry.h"
 #import "EQEWebViewController.h"
+#import "SortSelectorTableView.h"
+#import "FPPopoverController.h"
 
 
 @interface EQEListViewController ()
@@ -34,9 +36,12 @@
     [refreshControl addTarget:self action:@selector(doRefresh:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
-    
-    
     [self doRefresh:nil];
+
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sort" style:UIBarButtonItemStylePlain target:self action:@selector(sortButtonSelected:)];
+
+    
     }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -108,5 +113,24 @@
     [self.refreshControl endRefreshing];
 
 }
+
+- (IBAction)sortButtonSelected:(id)sender;
+
+{
+    UIBarButtonItem *buttonItem = sender;
+    UIView *btnView = [buttonItem valueForKey:@"view"];
+    
+    SortSelectorTableView *sortController = [[SortSelectorTableView alloc] init];
+    
+    //external controller
+    FPPopoverController *popover= [[FPPopoverController alloc] initWithViewController:sortController];
+    popover.arrowDirection = FPPopoverArrowDirectionUp;
+    popover.tint = FPPopoverLightGrayTint;
+    popover.alpha = 0.9;
+    [popover presentPopoverFromView:btnView];
+    
+    
+}
+
 
 @end

@@ -23,6 +23,10 @@
 		9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEABD183965F6007BFC68 /* EQEEntry.m */; };
 		9BCFEAC11839661B007BFC68 /* EQEApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */; };
 		9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49037183D37B800161F0A /* EQEWebViewController.m */; };
+		9BE49043183D54C800161F0A /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49040183D54C800161F0A /* FPPopoverController.m */; };
+		9BE49044183D54C800161F0A /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49042183D54C800161F0A /* FPPopoverView.m */; };
+		9BE49047183D57C800161F0A /* SortSelectorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49046183D57C800161F0A /* SortSelectorTableView.m */; };
+		9BE4904A183D5D0900161F0A /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49049183D5D0800161F0A /* FPTouchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,15 @@
 		9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEApiRequest.m; sourceTree = "<group>"; };
 		9BE49036183D37B800161F0A /* EQEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEWebViewController.h; sourceTree = "<group>"; };
 		9BE49037183D37B800161F0A /* EQEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEWebViewController.m; sourceTree = "<group>"; };
+		9BE4903E183D54C800161F0A /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		9BE4903F183D54C800161F0A /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
+		9BE49040183D54C800161F0A /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
+		9BE49041183D54C800161F0A /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
+		9BE49042183D54C800161F0A /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
+		9BE49045183D57C800161F0A /* SortSelectorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortSelectorTableView.h; sourceTree = "<group>"; };
+		9BE49046183D57C800161F0A /* SortSelectorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortSelectorTableView.m; sourceTree = "<group>"; };
+		9BE49048183D5D0800161F0A /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
+		9BE49049183D5D0800161F0A /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,15 @@
 		9BCFEA7E1839622B007BFC68 = {
 			isa = PBXGroup;
 			children = (
+				9BE49048183D5D0800161F0A /* FPTouchView.h */,
+				9BE49049183D5D0800161F0A /* FPTouchView.m */,
+				9BE49045183D57C800161F0A /* SortSelectorTableView.h */,
+				9BE49046183D57C800161F0A /* SortSelectorTableView.m */,
+				9BE4903E183D54C800161F0A /* ARCMacros.h */,
+				9BE4903F183D54C800161F0A /* FPPopoverController.h */,
+				9BE49040183D54C800161F0A /* FPPopoverController.m */,
+				9BE49041183D54C800161F0A /* FPPopoverView.h */,
+				9BE49042183D54C800161F0A /* FPPopoverView.m */,
 				9BCFEA901839622B007BFC68 /* Earthquakes5 */,
 				9BCFEAA91839622B007BFC68 /* Earthquakes5Tests */,
 				9BCFEA891839622B007BFC68 /* Frameworks */,
@@ -262,9 +284,13 @@
 			files = (
 				9BCFEABB1839627C007BFC68 /* EQEListViewController.m in Sources */,
 				9BCFEAC11839661B007BFC68 /* EQEApiRequest.m in Sources */,
+				9BE49043183D54C800161F0A /* FPPopoverController.m in Sources */,
 				9BCFEA9B1839622B007BFC68 /* EQEAppDelegate.m in Sources */,
 				9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */,
 				9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */,
+				9BE4904A183D5D0900161F0A /* FPTouchView.m in Sources */,
+				9BE49044183D54C800161F0A /* FPPopoverView.m in Sources */,
+				9BE49047183D57C800161F0A /* SortSelectorTableView.m in Sources */,
 				9BCFEA971839622B007BFC68 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
