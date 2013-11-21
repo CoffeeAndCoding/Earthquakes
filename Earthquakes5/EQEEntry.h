@@ -17,6 +17,9 @@
 @property double latitude;
 @property double longitude;
 @property float magnitude;
+@property (nonatomic) NSString *location;
+@property double depth;
+@property (nonatomic) NSString *date;
 
 
 - (id)initWithJson:(NSDictionary *)json;

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B229F29183D7F190017992A /* EQEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B229F27183D7F190017992A /* EQEDetailViewController.m */; };
+		9B229F2A183D7F190017992A /* EQEDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B229F28183D7F190017992A /* EQEDetailViewController.xib */; };
+		9B229F2C183D869C0017992A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B229F2B183D869C0017992A /* CoreLocation.framework */; };
+		9B229F2E183D87810017992A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B229F2D183D87810017992A /* MapKit.framework */; };
 		9BCFEA8B1839622B007BFC68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8A1839622B007BFC68 /* Foundation.framework */; };
 		9BCFEA8D1839622B007BFC68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */; };
 		9BCFEA8F1839622B007BFC68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8E1839622B007BFC68 /* UIKit.framework */; };
@@ -40,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B229F26183D7F190017992A /* EQEDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEDetailViewController.h; sourceTree = "<group>"; };
+		9B229F27183D7F190017992A /* EQEDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEDetailViewController.m; sourceTree = "<group>"; };
+		9B229F28183D7F190017992A /* EQEDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EQEDetailViewController.xib; sourceTree = "<group>"; };
+		9B229F2B183D869C0017992A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9B229F2D183D87810017992A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9BCFEA871839622B007BFC68 /* Earthquakes5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakes5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCFEA8A1839622B007BFC68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B229F2E183D87810017992A /* MapKit.framework in Frameworks */,
+				9B229F2C183D869C0017992A /* CoreLocation.framework in Frameworks */,
 				9BCFEA8D1839622B007BFC68 /* CoreGraphics.framework in Frameworks */,
 				9BCFEA8F1839622B007BFC68 /* UIKit.framework in Frameworks */,
 				9BCFEA8B1839622B007BFC68 /* Foundation.framework in Frameworks */,
@@ -130,6 +141,8 @@
 		9BCFEA891839622B007BFC68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B229F2D183D87810017992A /* MapKit.framework */,
+				9B229F2B183D869C0017992A /* CoreLocation.framework */,
 				9BCFEA8A1839622B007BFC68 /* Foundation.framework */,
 				9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */,
 				9BCFEA8E1839622B007BFC68 /* UIKit.framework */,
@@ -149,6 +162,9 @@
 				9BE49037183D37B800161F0A /* EQEWebViewController.m */,
 				9BCFEABC183965F6007BFC68 /* EQEEntry.h */,
 				9BCFEABD183965F6007BFC68 /* EQEEntry.m */,
+				9B229F26183D7F190017992A /* EQEDetailViewController.h */,
+				9B229F27183D7F190017992A /* EQEDetailViewController.m */,
+				9B229F28183D7F190017992A /* EQEDetailViewController.xib */,
 				9BCFEABF1839661B007BFC68 /* EQEApiRequest.h */,
 				9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */,
 				9BCFEA9C1839622B007BFC68 /* Images.xcassets */,
@@ -264,6 +280,7 @@
 			files = (
 				9BCFEA951839622B007BFC68 /* InfoPlist.strings in Resources */,
 				9BCFEA9D1839622B007BFC68 /* Images.xcassets in Resources */,
+				9B229F2A183D7F190017992A /* EQEDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +304,7 @@
 				9BE49043183D54C800161F0A /* FPPopoverController.m in Sources */,
 				9BCFEA9B1839622B007BFC68 /* EQEAppDelegate.m in Sources */,
 				9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */,
+				9B229F29183D7F190017992A /* EQEDetailViewController.m in Sources */,
 				9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */,
 				9BE4904A183D5D0900161F0A /* FPTouchView.m in Sources */,
 				9BE49044183D54C800161F0A /* FPPopoverView.m in Sources */,

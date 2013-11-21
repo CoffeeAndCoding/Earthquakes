@@ -23,8 +23,9 @@
         self.latitude = [[json valueForKey:@"latitude"] doubleValue];
         self.longitude = [[json valueForKey:@"longitude"] doubleValue];
         self.magnitude = [[json valueForKey:@"magnitude"] floatValue];
-        
-        
+        self.location = [json valueForKey:@"location"];
+        self.depth = [[json valueForKey:@"depth"] doubleValue];
+        self.date = [json valueForKey:@"date_time"];
         
     }
     
