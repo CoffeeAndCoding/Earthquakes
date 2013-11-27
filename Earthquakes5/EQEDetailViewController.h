@@ -35,6 +35,8 @@
 
 @property (nonatomic, strong)EQEEntry *quake;
 
+@property (nonatomic) CLLocationCoordinate2D centerCoordinate;
+
 - (void)findLocation;
 - (void)foundLocation: (CLLocation *)loc;
 

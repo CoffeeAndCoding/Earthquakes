@@ -9,16 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "EQEApiRequest.h"
 #import "EQEEntry.h"
+#import <CoreLocation/CoreLocation.h>
 
 @class EQEWebViewController;
 
-@interface EQEListViewController : UITableViewController <ApiRequestDelegate>
+@interface EQEListViewController : UITableViewController <ApiRequestDelegate, CLLocationManagerDelegate>
 
 {
-    
-   
+    CLLocationManager *locationManager;
 }
 @property (nonatomic) EQEWebViewController *webViewController;
+
+
 
 
 @end

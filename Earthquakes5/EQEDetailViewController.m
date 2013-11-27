@@ -15,6 +15,7 @@
 @implementation EQEDetailViewController
 
 @synthesize quake;
+@synthesize centerCoordinate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,30 @@
     
     self.title = quake.title;
     
+    [mapView setMapType:MKMapTypeHybrid];
+    CLLocationCoordinate2D center;
+    center.latitude = quake.latitude;
+    center.longitude = quake.longitude;
+    
+    //Declare span of map
+    MKCoordinateSpan span;
+    span.latitudeDelta = 2;
+    span.longitudeDelta = 1;
+    
+    //add center and span to a region, adjust region to fit in the mapview
+    MKCoordinateRegion region;
+    region.center = center;
+    region.span = span;
+    mapView.region = [mapView regionThatFits:region];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:center];
+    [annotation setTitle:@"Epicenter"];
+    [mapView addAnnotation:annotation];
+    
+    
+    
+    
     }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -46,10 +71,10 @@
     longitutdeField.text = [NSString stringWithFormat:@"%f", quake.longitude];
     dateField.text = quake.date;
     
-    
-    
-    
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

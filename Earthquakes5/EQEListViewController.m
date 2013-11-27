@@ -12,9 +12,10 @@
 #import "EQEWebViewController.h"
 #import "SortSelectorTableView.h"
 #import "FPPopoverController.h"
+#import "EQEDetailViewController.h"
 
 
-@interface EQEListViewController ()
+@interface EQEListViewController () 
 
 @property (nonatomic) NSArray *eqeEntries;
 
@@ -23,6 +24,7 @@
 @implementation EQEListViewController
 
 @synthesize webViewController;
+@synthesize eqeEntries;
 
 - (void)viewDidLoad
 {
@@ -40,6 +42,12 @@
 
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sort" style:UIBarButtonItemStylePlain target:self action:@selector(sortButtonSelected:)];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
 
     
     }
@@ -74,24 +82,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //Push the web view controlleronto the navigation stack
-    [self.navigationController pushViewController:webViewController animated:YES];
+    EQEDetailViewController *detailViewController = [[EQEDetailViewController alloc] init];
     
-    //Grab the entry
     EQEEntry *entry = [self.eqeEntries objectAtIndex:indexPath.row];
-    
-    //Construct URL with the link string
-    NSURL *url = [NSURL URLWithString:entry.link];
-    
-    //Construct URL Request
-    NSURLRequest *req = [NSURLRequest requestWithURL:url];
 
-    //Load the request into the webview
-    [webViewController.webView loadRequest:req];
+    detailViewController.quake = entry;
     
-    //Set the title of the web view controllers nav item
-    webViewController.navigationItem.title = entry.title;
-}
+    //Push to top of stack
+    [[self navigationController] pushViewController:detailViewController animated:YES];
+    }
 
 #pragma mark - APIRequestDelegat
 
@@ -132,6 +131,11 @@
     
     
 }
+
+
+
+
+
 
 
 @end

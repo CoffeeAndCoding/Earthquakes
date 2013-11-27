@@ -7,6 +7,7 @@
 //
 
 #import "SortSelectorTableView.h"
+#import "EQEDetailViewController.h"
 
 @implementation SortSelectorTableView
 @synthesize sortOptions;
@@ -41,5 +42,11 @@
 
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 @end

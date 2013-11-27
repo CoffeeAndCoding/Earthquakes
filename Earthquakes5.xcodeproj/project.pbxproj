@@ -78,8 +78,8 @@
 		9BE49040183D54C800161F0A /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
 		9BE49041183D54C800161F0A /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
 		9BE49042183D54C800161F0A /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
-		9BE49045183D57C800161F0A /* SortSelectorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortSelectorTableView.h; sourceTree = "<group>"; };
-		9BE49046183D57C800161F0A /* SortSelectorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortSelectorTableView.m; sourceTree = "<group>"; };
+		9BE49045183D57C800161F0A /* SortSelectorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SortSelectorTableView.h; path = ../SortSelectorTableView.h; sourceTree = "<group>"; };
+		9BE49046183D57C800161F0A /* SortSelectorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SortSelectorTableView.m; path = ../SortSelectorTableView.m; sourceTree = "<group>"; };
 		9BE49048183D5D0800161F0A /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
 		9BE49049183D5D0800161F0A /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +115,6 @@
 			children = (
 				9BE49048183D5D0800161F0A /* FPTouchView.h */,
 				9BE49049183D5D0800161F0A /* FPTouchView.m */,
-				9BE49045183D57C800161F0A /* SortSelectorTableView.h */,
-				9BE49046183D57C800161F0A /* SortSelectorTableView.m */,
 				9BE4903E183D54C800161F0A /* ARCMacros.h */,
 				9BE4903F183D54C800161F0A /* FPPopoverController.h */,
 				9BE49040183D54C800161F0A /* FPPopoverController.m */,
@@ -154,6 +152,8 @@
 		9BCFEA901839622B007BFC68 /* Earthquakes5 */ = {
 			isa = PBXGroup;
 			children = (
+				9BE49045183D57C800161F0A /* SortSelectorTableView.h */,
+				9BE49046183D57C800161F0A /* SortSelectorTableView.m */,
 				9BCFEA991839622B007BFC68 /* EQEAppDelegate.h */,
 				9BCFEA9A1839622B007BFC68 /* EQEAppDelegate.m */,
 				9BCFEAB91839627C007BFC68 /* EQEListViewController.h */,
