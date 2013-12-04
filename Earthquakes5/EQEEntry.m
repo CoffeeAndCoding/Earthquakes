@@ -34,22 +34,7 @@
         
         
         
-        
-        //"2013-12-04T16:43:36+00:00"
-        
-        
-        
-
-        
-       
-        
-        
-        
-        
-        
-//2013-12-04T13:05:20+00:00
-        
-        //[foo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+     
     }
     
     return self;

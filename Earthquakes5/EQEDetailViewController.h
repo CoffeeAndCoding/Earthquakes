@@ -12,7 +12,6 @@
 #import "EQEEntry.h"
 
 
-
 @interface EQEDetailViewController : UIViewController <UINavigationControllerDelegate, UITextFieldDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
 
 {
@@ -42,6 +41,7 @@
 
 - (IBAction)findNearby:(id)sender;
 - (IBAction)share:(id)sender;
+- (IBAction)linkToWeb:(id)sender;
 
 @end
 

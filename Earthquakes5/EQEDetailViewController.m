@@ -8,7 +8,11 @@
 
 #import "EQEDetailViewController.h"
 
+#import "EQEWebView.h"
+
 @interface EQEDetailViewController ()
+
+@property (nonatomic, strong) EQEWebView *webView;
 
 @end
 
@@ -16,6 +20,7 @@
 
 @synthesize quake;
 @synthesize centerCoordinate;
+@synthesize webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -93,5 +98,22 @@
 }
 
 - (IBAction)share:(id)sender {
+}
+
+- (IBAction)linkToWeb:(id)sender {
+    EQEWebView *wv = [[EQEWebView alloc] init];
+    self.webView = wv;
+    
+    [[self navigationController] pushViewController: webView animated:YES];
+    
+    NSURL *url = [NSURL URLWithString:quake.link];
+    
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    [[webView loadWebView] loadRequest:req];
+    
+    webView.navigationItem.title = quake.location;
+    
+
 }
 @end
