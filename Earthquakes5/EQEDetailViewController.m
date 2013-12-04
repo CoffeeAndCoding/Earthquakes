@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    self.title = quake.title;
+    self.title = @"Details";
     
     [mapView setMapType:MKMapTypeHybrid];
     CLLocationCoordinate2D center;
@@ -65,12 +65,18 @@
     [super viewWillAppear:YES];
     
     locationField.text = quake.location;
-    magnitudeField.text = [NSString stringWithFormat:@"%f", quake.magnitude];
-    depthField.text = [NSString stringWithFormat:@"%f", quake.depth];
+    magnitudeField.text = [NSString stringWithFormat:@"%.01f", quake.magnitude];
+    depthField.text = [NSString stringWithFormat:@"%.01f", quake.depth];
     latitudeField.text = [NSString stringWithFormat:@"%f", quake.latitude];
     longitutdeField.text = [NSString stringWithFormat:@"%f", quake.longitude];
-    dateField.text = quake.date;
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    
+
+    
+    dateField.text = [NSString stringWithFormat:@"%@ (UTC)", [dateFormatter stringFromDate: quake.date]];
 }
 
 

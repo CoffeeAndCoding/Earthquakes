@@ -13,13 +13,12 @@
 
 @class EQEWebViewController;
 
-@interface EQEListViewController : UITableViewController <ApiRequestDelegate, CLLocationManagerDelegate>
+@interface EQEListViewController : UITableViewController <ApiRequestDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 
 {
     CLLocationManager *locationManager;
 }
-@property (nonatomic) EQEWebViewController *webViewController;
-
+@property (nonatomic) NSArray *eqeEntries;
 
 
 

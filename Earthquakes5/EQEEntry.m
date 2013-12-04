@@ -18,15 +18,38 @@
     self = [super init];
     if (self) {
         self.earthquakeRating = [[[json valueForKey:@"title"] componentsSeparatedByString:@" "] objectAtIndex:0];
-        self.title = [[[json valueForKey:@"title"] componentsSeparatedByString:@" - "]objectAtIndex:1];
+        self.title = [json valueForKey:@"title"]; // componentsSeparatedByString:@" - "]objectAtIndex:1];
         self.link = [json valueForKey:@"link"];
         self.latitude = [[json valueForKey:@"latitude"] doubleValue];
         self.longitude = [[json valueForKey:@"longitude"] doubleValue];
         self.magnitude = [[json valueForKey:@"magnitude"] floatValue];
-        self.location = [json valueForKey:@"location"];
+        self.location = [[[json valueForKey:@"location"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] capitalizedString];
         self.depth = [[json valueForKey:@"depth"] doubleValue];
-        self.date = [json valueForKey:@"date_time"];
+        self.unformattedDate = [[[json valueForKey:@"date_time"] componentsSeparatedByString:@"+"] objectAtIndex:0];
         
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
+        self.date = [dateFormatter dateFromString:self.unformattedDate];
+        
+        
+        
+        
+        //"2013-12-04T16:43:36+00:00"
+        
+        
+        
+
+        
+       
+        
+        
+        
+        
+        
+//2013-12-04T13:05:20+00:00
+        
+        //[foo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     }
     
     return self;

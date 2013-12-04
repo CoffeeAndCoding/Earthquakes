@@ -19,7 +19,8 @@
 @property float magnitude;
 @property (nonatomic) NSString *location;
 @property double depth;
-@property (nonatomic) NSString *date;
+@property (nonatomic) NSString *unformattedDate;
+@property (nonatomic)NSDate *date;
 
 
 - (id)initWithJson:(NSDictionary *)json;

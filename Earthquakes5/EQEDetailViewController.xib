@@ -77,7 +77,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Oo4-La-1RP">
-                    <rect key="frame" x="112" y="111" width="188" height="30"/>
+                    <rect key="frame" x="116" y="111" width="188" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
@@ -86,7 +86,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="G1y-za-nHU">
-                    <rect key="frame" x="112" y="152" width="108" height="30"/>
+                    <rect key="frame" x="106" y="152" width="108" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
@@ -95,7 +95,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="qRn-u9-ViG">
-                    <rect key="frame" x="112" y="194" width="108" height="30"/>
+                    <rect key="frame" x="69" y="190" width="108" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
@@ -104,7 +104,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9fy-57-for">
-                    <rect key="frame" x="112" y="269" width="108" height="30"/>
+                    <rect key="frame" x="99" y="269" width="108" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
@@ -113,7 +113,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rgn-6p-6EP">
-                    <rect key="frame" x="112" y="235" width="108" height="30"/>
+                    <rect key="frame" x="85" y="235" width="108" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>

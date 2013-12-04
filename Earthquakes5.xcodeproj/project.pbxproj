@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B071FC318492B29004A419C /* EQECustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B071FC218492B29004A419C /* EQECustomCell.m */; };
+		9B071FC518492B6B004A419C /* EQECustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B071FC418492B6B004A419C /* EQECustomCell.xib */; };
 		9B229F29183D7F190017992A /* EQEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B229F27183D7F190017992A /* EQEDetailViewController.m */; };
 		9B229F2A183D7F190017992A /* EQEDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B229F28183D7F190017992A /* EQEDetailViewController.xib */; };
 		9B229F2C183D869C0017992A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B229F2B183D869C0017992A /* CoreLocation.framework */; };
 		9B229F2E183D87810017992A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B229F2D183D87810017992A /* MapKit.framework */; };
+		9B2F1F171846EA1D00D58BC2 /* EQESortingClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2F1F161846EA1D00D58BC2 /* EQESortingClass.m */; };
 		9BCFEA8B1839622B007BFC68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8A1839622B007BFC68 /* Foundation.framework */; };
 		9BCFEA8D1839622B007BFC68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */; };
 		9BCFEA8F1839622B007BFC68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8E1839622B007BFC68 /* UIKit.framework */; };
@@ -26,11 +29,6 @@
 		9BCFEABB1839627C007BFC68 /* EQEListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEABA1839627C007BFC68 /* EQEListViewController.m */; };
 		9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEABD183965F6007BFC68 /* EQEEntry.m */; };
 		9BCFEAC11839661B007BFC68 /* EQEApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */; };
-		9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49037183D37B800161F0A /* EQEWebViewController.m */; };
-		9BE49043183D54C800161F0A /* FPPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49040183D54C800161F0A /* FPPopoverController.m */; };
-		9BE49044183D54C800161F0A /* FPPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49042183D54C800161F0A /* FPPopoverView.m */; };
-		9BE49047183D57C800161F0A /* SortSelectorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49046183D57C800161F0A /* SortSelectorTableView.m */; };
-		9BE4904A183D5D0900161F0A /* FPTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE49049183D5D0800161F0A /* FPTouchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B071FC118492B29004A419C /* EQECustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQECustomCell.h; sourceTree = "<group>"; };
+		9B071FC218492B29004A419C /* EQECustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQECustomCell.m; sourceTree = "<group>"; };
+		9B071FC418492B6B004A419C /* EQECustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EQECustomCell.xib; sourceTree = "<group>"; };
 		9B229F26183D7F190017992A /* EQEDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEDetailViewController.h; sourceTree = "<group>"; };
 		9B229F27183D7F190017992A /* EQEDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEDetailViewController.m; sourceTree = "<group>"; };
 		9B229F28183D7F190017992A /* EQEDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EQEDetailViewController.xib; sourceTree = "<group>"; };
 		9B229F2B183D869C0017992A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9B229F2D183D87810017992A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9B2F1F151846EA1D00D58BC2 /* EQESortingClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQESortingClass.h; sourceTree = "<group>"; };
+		9B2F1F161846EA1D00D58BC2 /* EQESortingClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQESortingClass.m; sourceTree = "<group>"; };
 		9BCFEA871839622B007BFC68 /* Earthquakes5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakes5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCFEA8A1839622B007BFC68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,17 +74,6 @@
 		9BCFEABD183965F6007BFC68 /* EQEEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEEntry.m; sourceTree = "<group>"; };
 		9BCFEABF1839661B007BFC68 /* EQEApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEApiRequest.h; sourceTree = "<group>"; };
 		9BCFEAC01839661B007BFC68 /* EQEApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEApiRequest.m; sourceTree = "<group>"; };
-		9BE49036183D37B800161F0A /* EQEWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQEWebViewController.h; sourceTree = "<group>"; };
-		9BE49037183D37B800161F0A /* EQEWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQEWebViewController.m; sourceTree = "<group>"; };
-		9BE4903E183D54C800161F0A /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
-		9BE4903F183D54C800161F0A /* FPPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverController.h; sourceTree = "<group>"; };
-		9BE49040183D54C800161F0A /* FPPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverController.m; sourceTree = "<group>"; };
-		9BE49041183D54C800161F0A /* FPPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPopoverView.h; sourceTree = "<group>"; };
-		9BE49042183D54C800161F0A /* FPPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPopoverView.m; sourceTree = "<group>"; };
-		9BE49045183D57C800161F0A /* SortSelectorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SortSelectorTableView.h; path = ../SortSelectorTableView.h; sourceTree = "<group>"; };
-		9BE49046183D57C800161F0A /* SortSelectorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SortSelectorTableView.m; path = ../SortSelectorTableView.m; sourceTree = "<group>"; };
-		9BE49048183D5D0800161F0A /* FPTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTouchView.h; sourceTree = "<group>"; };
-		9BE49049183D5D0800161F0A /* FPTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTouchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +105,6 @@
 		9BCFEA7E1839622B007BFC68 = {
 			isa = PBXGroup;
 			children = (
-				9BE49048183D5D0800161F0A /* FPTouchView.h */,
-				9BE49049183D5D0800161F0A /* FPTouchView.m */,
-				9BE4903E183D54C800161F0A /* ARCMacros.h */,
-				9BE4903F183D54C800161F0A /* FPPopoverController.h */,
-				9BE49040183D54C800161F0A /* FPPopoverController.m */,
-				9BE49041183D54C800161F0A /* FPPopoverView.h */,
-				9BE49042183D54C800161F0A /* FPPopoverView.m */,
 				9BCFEA901839622B007BFC68 /* Earthquakes5 */,
 				9BCFEAA91839622B007BFC68 /* Earthquakes5Tests */,
 				9BCFEA891839622B007BFC68 /* Frameworks */,
@@ -152,16 +137,17 @@
 		9BCFEA901839622B007BFC68 /* Earthquakes5 */ = {
 			isa = PBXGroup;
 			children = (
-				9BE49045183D57C800161F0A /* SortSelectorTableView.h */,
-				9BE49046183D57C800161F0A /* SortSelectorTableView.m */,
 				9BCFEA991839622B007BFC68 /* EQEAppDelegate.h */,
 				9BCFEA9A1839622B007BFC68 /* EQEAppDelegate.m */,
 				9BCFEAB91839627C007BFC68 /* EQEListViewController.h */,
 				9BCFEABA1839627C007BFC68 /* EQEListViewController.m */,
-				9BE49036183D37B800161F0A /* EQEWebViewController.h */,
-				9BE49037183D37B800161F0A /* EQEWebViewController.m */,
+				9B2F1F151846EA1D00D58BC2 /* EQESortingClass.h */,
+				9B2F1F161846EA1D00D58BC2 /* EQESortingClass.m */,
 				9BCFEABC183965F6007BFC68 /* EQEEntry.h */,
 				9BCFEABD183965F6007BFC68 /* EQEEntry.m */,
+				9B071FC118492B29004A419C /* EQECustomCell.h */,
+				9B071FC218492B29004A419C /* EQECustomCell.m */,
+				9B071FC418492B6B004A419C /* EQECustomCell.xib */,
 				9B229F26183D7F190017992A /* EQEDetailViewController.h */,
 				9B229F27183D7F190017992A /* EQEDetailViewController.m */,
 				9B229F28183D7F190017992A /* EQEDetailViewController.xib */,
@@ -278,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B071FC518492B6B004A419C /* EQECustomCell.xib in Resources */,
 				9BCFEA951839622B007BFC68 /* InfoPlist.strings in Resources */,
 				9BCFEA9D1839622B007BFC68 /* Images.xcassets in Resources */,
 				9B229F2A183D7F190017992A /* EQEDetailViewController.xib in Resources */,
@@ -299,16 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B071FC318492B29004A419C /* EQECustomCell.m in Sources */,
 				9BCFEABB1839627C007BFC68 /* EQEListViewController.m in Sources */,
 				9BCFEAC11839661B007BFC68 /* EQEApiRequest.m in Sources */,
-				9BE49043183D54C800161F0A /* FPPopoverController.m in Sources */,
 				9BCFEA9B1839622B007BFC68 /* EQEAppDelegate.m in Sources */,
-				9BE49038183D37B800161F0A /* EQEWebViewController.m in Sources */,
+				9B2F1F171846EA1D00D58BC2 /* EQESortingClass.m in Sources */,
 				9B229F29183D7F190017992A /* EQEDetailViewController.m in Sources */,
 				9BCFEABE183965F6007BFC68 /* EQEEntry.m in Sources */,
-				9BE4904A183D5D0900161F0A /* FPTouchView.m in Sources */,
-				9BE49044183D54C800161F0A /* FPPopoverView.m in Sources */,
-				9BE49047183D57C800161F0A /* SortSelectorTableView.m in Sources */,
 				9BCFEA971839622B007BFC68 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,26 +9,31 @@
 #import "EQEListViewController.h"
 #import "EQEApiRequest.h"
 #import "EQEEntry.h"
-#import "EQEWebViewController.h"
-#import "SortSelectorTableView.h"
-#import "FPPopoverController.h"
 #import "EQEDetailViewController.h"
+#import "EQESortingClass.h"
+#import "EQECustomCell.h"
 
 
-@interface EQEListViewController () 
+@interface EQEListViewController () <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic) NSArray *eqeEntries;
+@property (nonatomic, strong) NSMutableArray *sortOptions;
+@property (nonatomic) EQESortingClass *sortingActor;
+
 
 @end
 
 @implementation EQEListViewController
 
-@synthesize webViewController;
 @synthesize eqeEntries;
+@synthesize sortingActor;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"EQECustomCell" bundle:nil];
+    
+    [[self tableView] registerNib:nib   forCellReuseIdentifier:@"EQECustomCell"];
     
     self.title = @"Recent Earthquakes";
     
@@ -48,6 +53,7 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     [locationManager startUpdatingLocation];
+    
 
     
     }
@@ -57,20 +63,33 @@
     self = [super initWithStyle:style];
     if(self) {
         
+        EQESortingClass *sortingClass = [[EQESortingClass alloc] init];
+        self.sortingActor = sortingClass;
+        
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
     }
     return self;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UITableViewCell"];
-    }
     EQEEntry *e = [self.eqeEntries objectAtIndex:[indexPath row]];
-    cell.textLabel.text = e.title;
-    cell.detailTextLabel.text = e.earthquakeRating;
     
+    EQECustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EQECustomCell"];
+    
+    cell.locationLabel.text = e.location;
+    cell.magLabel.text = [NSString stringWithFormat:@"%0.1f", e.magnitude];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    
+    
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@ (UTC)", [dateFormatter stringFromDate: e.date]];
+    cell.ratingLabel.text = e.earthquakeRating;
+    
+    // NSLog(@"%@", [array objectAtIndex:0]);
     return cell;
     
 }
@@ -117,20 +136,28 @@
 - (IBAction)sortButtonSelected:(id)sender;
 
 {
-    UIBarButtonItem *buttonItem = sender;
-    UIView *btnView = [buttonItem valueForKey:@"view"];
     
-    SortSelectorTableView *sortController = [[SortSelectorTableView alloc] init];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Sort by" delegate: self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
     
-    //external controller
-    FPPopoverController *popover= [[FPPopoverController alloc] initWithViewController:sortController];
-    popover.arrowDirection = FPPopoverArrowDirectionUp;
-    popover.tint = FPPopoverLightGrayTint;
-    popover.alpha = 0.9;
-    [popover presentPopoverFromView:btnView];
+    for (NSString *sortby in sortingActor.arrayOfOptions) {
+        [actionSheet addButtonWithTitle:sortby];
+        
+    }
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
+    [actionSheet showInView:self.view];
     
+    
+
     
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    eqeEntries = [eqeEntries sortedArrayUsingDescriptors:[NSArray arrayWithObject:[sortingActor sortDescriptorForSortingOptionsIndex:buttonIndex]]];
+    [self.tableView reloadData];
+}
+
+
 
 
 
