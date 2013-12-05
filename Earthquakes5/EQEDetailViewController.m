@@ -98,6 +98,24 @@
 }
 
 - (IBAction)share:(id)sender {
+    //Email Subject
+    NSString *emailTitle = [NSString stringWithFormat:@"Crazy earthquake in %@",quake.location];
+    
+    NSString *messageBody = [NSString stringWithFormat:@"Check out this awesome earthquake!! -->> <a href=%@>EARTHQUAKE</a>", quake.link];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject: emailTitle];
+    [mc setMessageBody:messageBody isHTML:YES];
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+
 }
 
 - (IBAction)linkToWeb:(id)sender {

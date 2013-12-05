@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
+
 #import <CoreLocation/CoreLocation.h>
 #import "EQEEntry.h"
 
 
-@interface EQEDetailViewController : UIViewController <UINavigationControllerDelegate, UITextFieldDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
+@interface EQEDetailViewController : UIViewController <UINavigationControllerDelegate, UITextFieldDelegate, MKMapViewDelegate, CLLocationManagerDelegate, MFMailComposeViewControllerDelegate>
 
 {
     CLLocationManager *locationManager;

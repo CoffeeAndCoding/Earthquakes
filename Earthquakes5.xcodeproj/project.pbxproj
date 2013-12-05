@@ -15,6 +15,7 @@
 		9B229F2E183D87810017992A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B229F2D183D87810017992A /* MapKit.framework */; };
 		9B2F1F171846EA1D00D58BC2 /* EQESortingClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2F1F161846EA1D00D58BC2 /* EQESortingClass.m */; };
 		9B3F761B184FED330091F292 /* EQEWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3F761A184FED330091F292 /* EQEWebView.m */; };
+		9B3F761D184FF7BC0091F292 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3F761C184FF7BC0091F292 /* MessageUI.framework */; };
 		9BCFEA8B1839622B007BFC68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8A1839622B007BFC68 /* Foundation.framework */; };
 		9BCFEA8D1839622B007BFC68 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */; };
 		9BCFEA8F1839622B007BFC68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCFEA8E1839622B007BFC68 /* UIKit.framework */; };
@@ -55,6 +56,7 @@
 		9B2F1F161846EA1D00D58BC2 /* EQESortingClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQESortingClass.m; sourceTree = "<group>"; };
 		9B3F7619184FED330091F292 /* EQEWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQEWebView.h; path = ../EQEWebView.h; sourceTree = "<group>"; };
 		9B3F761A184FED330091F292 /* EQEWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EQEWebView.m; path = ../EQEWebView.m; sourceTree = "<group>"; };
+		9B3F761C184FF7BC0091F292 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		9BCFEA871839622B007BFC68 /* Earthquakes5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earthquakes5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCFEA8A1839622B007BFC68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9BCFEA8C1839622B007BFC68 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3F761D184FF7BC0091F292 /* MessageUI.framework in Frameworks */,
 				9B229F2E183D87810017992A /* MapKit.framework in Frameworks */,
 				9B229F2C183D869C0017992A /* CoreLocation.framework in Frameworks */,
 				9BCFEA8D1839622B007BFC68 /* CoreGraphics.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		9BCFEA891839622B007BFC68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B3F761C184FF7BC0091F292 /* MessageUI.framework */,
 				9B229F2D183D87810017992A /* MapKit.framework */,
 				9B229F2B183D869C0017992A /* CoreLocation.framework */,
 				9BCFEA8A1839622B007BFC68 /* Foundation.framework */,
