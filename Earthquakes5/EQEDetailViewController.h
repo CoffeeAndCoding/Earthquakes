@@ -38,8 +38,6 @@
 
 @property (nonatomic) CLLocationCoordinate2D centerCoordinate;
 
-- (void)findLocation;
-- (void)foundLocation: (CLLocation *)loc;
 
 - (IBAction)findNearby:(id)sender;
 - (IBAction)share:(id)sender;

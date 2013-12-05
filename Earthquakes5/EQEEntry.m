@@ -27,6 +27,8 @@
         self.depth = [[json valueForKey:@"depth"] doubleValue];
         self.unformattedDate = [[[json valueForKey:@"date_time"] componentsSeparatedByString:@"+"] objectAtIndex:0];
         
+    
+        
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";

@@ -23,6 +23,7 @@
 @property (nonatomic)NSDate *date;
 
 
+
 - (id)initWithJson:(NSDictionary *)json;
 
 @end
