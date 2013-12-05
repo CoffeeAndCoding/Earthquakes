@@ -8,7 +8,14 @@
 
 #import "EQEEntry.h"
 
+
+
+
 @implementation EQEEntry
+
+@synthesize location, locationManager;
+
+
 
 
 
@@ -27,6 +34,21 @@
         self.depth = [[json valueForKey:@"depth"] doubleValue];
         self.unformattedDate = [[[json valueForKey:@"date_time"] componentsSeparatedByString:@"+"] objectAtIndex:0];
         
+        CLLocation *eqCoords = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
+        self.coordinate = eqCoords;
+        
+        
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        [locationManager startUpdatingLocation];
+        
+        self.distance = [self.currentLocation distanceFromLocation:_coordinate];
+        
+        
+        
+        
     
         
         
@@ -40,6 +62,12 @@
     }
     
     return self;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    self.currentLocation = newLocation;
+    
+    if(newLocation.horizontalAccuracy <= 100.0f) { [locationManager stopUpdatingLocation]; }
 }
 
 @end

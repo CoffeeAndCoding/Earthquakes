@@ -26,9 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        locationManager = [[CLLocationManager alloc] init];
-        [locationManager setDelegate:self];
-        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        
     }
     return self;
 }

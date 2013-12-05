@@ -48,11 +48,6 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sort" style:UIBarButtonItemStylePlain target:self action:@selector(sortButtonSelected:)];
     
-    locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    [locationManager startUpdatingLocation];
     
 
     
@@ -68,6 +63,8 @@
         
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
+       
     }
     return self;
 }
@@ -157,6 +154,8 @@
     [self.tableView reloadData];
 }
 
+
+#pragma mark - CLLocation
 
 
 

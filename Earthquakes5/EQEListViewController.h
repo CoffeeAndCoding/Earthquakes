@@ -16,10 +16,8 @@
 @interface EQEListViewController : UITableViewController <ApiRequestDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 
 {
-    CLLocationManager *locationManager;
 }
 @property (nonatomic) NSArray *eqeEntries;
-
 
 
 @end

@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "EQEApiRequest.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface EQEEntry : NSObject
 
+@interface EQEEntry : NSObject<CLLocationManagerDelegate>
+
+{
+    CLLocationManager *locationManager;
+
+}
 @property (nonatomic) NSString *earthquakeRating;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *link;
@@ -21,6 +27,12 @@
 @property double depth;
 @property (nonatomic) NSString *unformattedDate;
 @property (nonatomic)NSDate *date;
+@property (nonatomic, strong) CLLocation *coordinate;
+@property double distance;
+
+@property (strong, nonatomic) CLLocation *currentLocation;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 
 
 
